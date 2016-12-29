@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+ <!-- 连接数据库的配置 -->
+		<!-- 数据库连接信息 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate1</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- 配置一个方言 -->
+
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQlInnoDBDialect</property>
+
+		<!-- 其他属性 -->
+		<!-- 将生成的sql语句打印到控制台 -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- 格式化打印到控制台的语句 -->
+		<property name="hibernate.format_sql">true</property>
+		<!-- 表示用于创建表的策略 update: 数据库中已经存在表，根据配置自动创建表 如果数据库中已经存在表，而且与配置一致，则不作任何事情 
+			如果数据库已经存在表，但是映射配置修改过，与表结构不一致，会更新表结构但是可以保证已有数据不丢失 -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 映射管理 -->
+		<mapping resource="rex/pojo/User.hbm.xml" />
+yh	</session-factory>
+</hibernate-configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

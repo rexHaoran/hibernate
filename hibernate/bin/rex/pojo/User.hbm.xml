@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-11-16 18:43:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<!-- T_USER前边加上前缀为了区别与数据库中一样的名字 -->
+	<class name="rex.pojo.User" table="T_USER">
+		<!-- type表示映射的时候指定name的类型 -->
+		<id name="userId" type="java.lang.Integer">
+			<column name="USER_ID" />
+			<!-- 主键的生成策略  主键怎么去维护
+					有三种维护方式：
+						数据库维护
+						框架来维护
+						自己来维护，业务维护主键
+						native根据方言决定用哪种主键生成策略
+			-->
+			<generator class="native" />
+		</id>
+		<property name="username" type="java.lang.String">
+			<column name="USERNAME" />
+		</property>
+		<property name="birthday" type="date">
+	<!-- sql-type指定数据库中的类型，可以省略 -->
+			<column name="BIRTHDAY" />
+		</property>
+	</class>
+</hibernate-mapping>
