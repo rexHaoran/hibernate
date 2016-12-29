@@ -1,0 +1,1 @@
+这是hibernate的内容
